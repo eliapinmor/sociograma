@@ -1,0 +1,30 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "answer": "Alice"
+                },
+                {
+                    "id": 2,
+                    "answer": "A"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "questions": [
+                {
+                    "id": 1,
+                    "answer": "Bob"
+                },
+                {
+                    "id": 2,
+                    "answer": "B"
+                }
+            ]
+        }
+    ]
+}

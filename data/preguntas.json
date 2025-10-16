@@ -1,0 +1,17 @@
+{
+    "preguntas": [
+        {
+            "id": 1,
+            "pregunta": "Escribe tu nombre"
+        },
+        {
+            "id": 2,
+            "pregunta": "¿A que grupo vas?",
+            "opciones": [
+                "A",
+                "B",
+                "C"
+            ]
+        }
+    ]
+}
