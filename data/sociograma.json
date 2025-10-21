@@ -2,16 +2,29 @@
     "students": [
         {
             "id": 1,
-            "questions": [
-                {
-                    "id": 1,
-                    "answer": "Alice"
-                },
-                {
-                    "id": 2,
-                    "answer": "A"
-                }
-            ]
+            "nombre": "Alice",
+            "email": "",
+            "curso": "",
+            "preferido1": "",
+            "preferido2": "",
+            "evitar1": "",
+            "motivo_preferencia": "",
+            "motivo_evitar": "",
+            "roles_habitual": [],
+            "lenguajes_fuertes": [],
+            "experiencia:": "",
+            "sentimiento_grupo": "",
+            "comunicacion": "",
+            "herramientas": "",
+            "disponibilidad_horas": "",
+            "gestion_tiempo": "",
+            "estres_proyecto": "",
+            "preferencia_espacio": "",
+            "dispositivo": "",
+            "so_preferido": "",
+            "comentario": "",
+            "fecha_respuesta": ""
+
         },
         {
             "id": 2,
