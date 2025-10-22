@@ -13,13 +13,15 @@ $errors = isset($errors) ? $errors : [];
             <label for="email">Email</label>
             <input id="email" name="email" type="email" required>
 
-            <label for="curso">Email</label>
-            <input id="curso" name="curso" type="select" required>
-            <option value="DAW">DAW</option>
-            <option value="ASIR">ASIR</option>
-            <option value="DAM">DAM</option>
-            <option value="SMR">SMR</option>
+            <label for="curso">¿En qué curso estás?</label><br>
+                <input id="daw" name="curso" type="radio" value="daw" required>
+                <label for="daw">DAW</label>
+                <input id="dam" name="curso" type="radio" value="dam" required>
+                <label for="dam">DAM</label>
+                <input id="asix" name="curso" type="radio" value="asix" required>
+                <label for="asix">ASIX</label><br>
             </select>
+
         </section>
         <section>
             <h2>Preferencias de colaboración</h2>
@@ -40,74 +42,121 @@ $errors = isset($errors) ? $errors : [];
         </section>
         <section>
             <h2>Rol y habilidades</h2>
-            <label for="rol_habitual">¿En qué rol te sueles desenvolver habitualmente?</label>
-            <input id="rol_habitual" name="rol_habitual" type="radio" required>
-            <option value="lider">Líder</option>
-            <option value="seguidor">Seguidor</option>
-        </select>
+            <label for="rol_habitual">¿En qué rol te sueles desenvolver habitualmente?</label><br>
+                <input id="lider" name="rol_habitual" type="radio" value="lider" required>
+                <label for="lider">Líder</label>
+                <input id="seguidor" name="rol_habitual" type="radio" value="seguidor" required>
+                <label for="seguidor">Seguidor</label><br>
+            </select>
 
-        <label for="lenguaje_fuerte">¿Cuáles son tus lenguajes de programación más fuertes?</label>
-        <input id="lenguaje_fuerte" name="lenguaje_fuerte" type="select" required>
-        <option value="php">PHP</option>
-        <option value="javascript">JavaScript</option>
-        <option value="python">Python</option>
-        <option value="java">Java</option>
-        <option value="csharp">C#</option>
-        <option value="ruby">Ruby</option>
-        <option value="cplus">C++</option>
-        <option value="sql">SQL</option>
-        </select>
+            <label for="lenguaje_fuerte">¿Cuáles son tus lenguajes de programación más fuertes?</label>
+                <input type="checkbox" id="php" name="lenguaje_fuerte" value="php">
+                <label for="php">PHP</label><br>
 
-        <label for="experiencia">¿Cuánta experiencia tienes trabajando en proyectos?</label>
-        <input id="experiencia" name="experiencia" type="range" min="0" max="5" required>
+                <input type="checkbox" id="javascript" name="lenguaje_fuerte" value="javascript">
+                <label for="javascript">JavaScript</label><br>
+
+                <input type="checkbox" id="python" name="lenguaje_fuerte" value="python">
+                <label for="python">Python</label><br>
+
+                <input type="checkbox" id="java" name="lenguaje_fuerte" value="java">
+                <label for="java">Java</label><br>
+
+                <input type="checkbox" id="csharp" name="lenguaje_fuerte" value="csharp">
+                <label for="csharp">C#</label><br>
+
+                <input type="checkbox" id="cplus" name="lenguaje_fuerte" value="cplus">
+                <label for="cplus">C++</label><br>
+                
+                <input type="checkbox" id="sql" name="lenguaje_fuerte" value="sql">
+                <label for="sql">SQL</label><br><br>
+            </select>
+
+            <label for="experiencia">¿Cuánta experiencia tienes trabajando en proyectos?</label>
+            <input id="experiencia" name="experiencia" type="range" min="0" max="5" required>
         </section>
         <section>
             <h2>Dinámica y comunicación</h2>        
-        <label for="comunicacion">¿Qué comunicación sueles usar?</label>
-        <input id="comunicacion" name="comunicacion" type="radio" required>
-        <option value="sincrona">Síncrona</option>
-        <option value="asincrona">Asíncrona</option>
-        <option value="mixta">Mixta</option>
-        </select>
+            <label for="comunicacion">¿Qué comunicación sueles usar?</label>
+            <input id="comunicacion" name="comunicacion" type="radio" required>
+                <option value="sincrona">Síncrona</option>
+                <option value="asincrona">Asíncrona</option>
+                <option value="mixta">Mixta</option>
+            </select>
 
-         <label for="herramientas">¿Con qué herramientas has trabajado?</label><br>
-            <input type="checkbox" id="git" name="git" value="Git">
-            <label for="git">Git</label><br>
-
-            <input type="checkbox" id="docker" name="docker" value="Docker">
-            <label for="docker">Docker</label><br>
-
-            <input type="checkbox" id="jira" name="jira" value="Jira">
-            <label for="jira">Jira</label><br>
-
-            <input type="checkbox" id="trello" name="trello" value="Trello">
-            <label for="trello">Trello</label><br>
-            <input type="checkbox" id="slack" name="slack" value="Slack">
-            <label for="slack">Slack</label><br>
-            <input type="checkbox" id="notion" name="notion" value="Notion">
-            <label for="notion">Notion</label><br><br>
+            <label for="herramientas">¿Con qué herramientas has trabajado?</label><br>
+                <input type="checkbox" id="git" name="herramientas" value="Git">
+                <label for="git">Git</label><br>
+                <input type="checkbox" id="docker" name="herramientas" value="Docker">
+                <label for="docker">Docker</label><br>
+                <input type="checkbox" id="jira" name="herramientas" value="Jira">
+                <label for="jira">Jira</label><br>
+                <input type="checkbox" id="trello" name="herramientas" value="Trello">
+                <label for="trello">Trello</label><br>
+                <input type="checkbox" id="slack" name="herramientas" value="Slack">
+                <label for="slack">Slack</label><br>
+                <input type="checkbox" id="notion" name="herramientas" value="Notion">
+                <label for="notion">Notion</label><br><br>
 
 
 
-        <label for="disponibilidad_horas">¿Qué disponibilidad de horas tienes?</label>
-        <input id="disponibilidad_horas_inicio" name="disponibilidad_horas_inicio" type="time" required>
-        <input id="disponibilidad_horas_fin" name="disponibilidad_horas_fin" type="time" required>
-
+            <label for="disponibilidad_horas">¿Qué disponibilidad de horas tienes?</label>
+            <input id="disponibilidad_horas_inicio" name="disponibilidad_horas_inicio" type="time" required>
+            <input id="disponibilidad_horas_fin" name="disponibilidad_horas_fin" type="time" required>
         </section>
         <section>
             <h2>Organización y bienestar</h2>
-            //gestion_tiempo
-            //estres
-            //preferencias_espacio
-                    <label for="sentimiento_grupo">¿Como te sientes al trabajar en grupo?</label>
+            <label for="gestion_tiempo">¿Cómo gestionas el tiempo?</label>
+            <select id="gestion_tiempo" name="gestion_tiempo" required>  
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label for="estres_proyecto">¿Cómo gestionas el estrés en un proyecto?</label>
+            <select id="estres_proyecto" name="estres_proyecto" required>  
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="preferencia_espacio">¿Cómo te gusta que sea tu espacio al trabajar?</label>
+            <select id="preferencia_espacio" name="preferencia_espacio" required>  
+                <option value="silencio">Silencio</option>
+                <option value="ruido">Ruido</option>
+                <option value="ruido_blanco">Ruido blanco</option>
+                <option value="musica">Música</option>
+                <option value="podcast">Podcast/Audiolibro</option>
+            </select>
+
+            <label for="sentimiento_grupo">¿Como te sientes al trabajar en grupo?</label>
                 <input id="sentimiento_grupo" name="sentimiento_grupo" type="select" required>  
                 <option value="muy_comodo">Muy cómodo</option>
                 <option value="comodo">Cómodo</option>
                 <option value="neutral">Neutral</option>
                 <option value="incómodo">Incómodo</option>
                 <option value="muy_incómodo">Muy incómodo</option>
-                </select>
+            </select>
         </section>
+        <section>
+            <h2>Logística</h2>
+                <label for="rol_habitual">¿Con que sistema operativo sueles trabajar?</label><br>
+                    <input id="windows" name="so_preferido" type="radio" value="windows">
+                    <label for="windows">Windows</label>
+                    <input id="linux" name="so_preferido" type="radio" value="linux">
+                    <label for="linux">Linux</label>
+                    <input id="mac" name="so_preferido" type="radio" value="mac">
+                    <label for="mac">Mac</label><br>
+            </select>
+        </section>
+        <section>
+            <h2>Observaciones</h2>
+            <label for="comentario">Escribe una observación</label>
+            <input id="comentario" type="textarea">
+</section>
 
         <button type="submit" id="button-enviar" disabled>Enviar</button>
     </form>
