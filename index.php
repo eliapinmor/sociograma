@@ -35,7 +35,7 @@ $errors = isset($errors) ? $errors : [];
             <input id="evitar1" name="evitar1" type="text" required>
 
             <label for="motivo_preferencia">¿Por qué prefieres trabajar con estas personas?</label>
-            <input id="motivo_preferencia" name="motivo_preferencia" type="textarea" required>
+            <input id="motivo_preferencia" name="motivo_preferencia" type="textarea" required maxlength="300">
 
             <label for="motivo_evitar">¿Por qué prefieres no trabajar con estas personas?</label>
             <input id="motivo_evitar" name="motivo_evitar" type="textarea" required>
