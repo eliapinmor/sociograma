@@ -6,6 +6,7 @@ include 'includes/functions.php';
 $input = [
     'nombre' => trim($_POST['nombre'] ?? ''),
     'email' => trim($_POST['email'] ?? ''),
+    'edad' => ($_POST['edad'] ?? ''),
     'curso' => trim($_POST['curso'] ?? ''),
     'preferido1' => trim($_POST['preferido1'] ?? ''),
     'preferido2' => trim($_POST['preferido2'] ?? ''),
@@ -40,6 +41,11 @@ if (!filter_var($input['email'], FILTER_VALIDATE_EMAIL)) {
     $errors['email'] = 'Introduce un email válido';
 }
 
+if ($input['edad'] === '') {
+    $errors['edad'] = 'Introduce tu edad';
+} elseif (!is_numeric($edad) || $edad < 15 || $edad > 100) {
+    $errors['edad'] = 'Introduce una edad válida entre 15 y 100 años.';
+}
 
 if (!in_array($input['curso'], ['daw', 'dam', 'asix'])) {
     $errors['curso'] = 'Indica en que curso estás';
@@ -155,7 +161,7 @@ save_json('data/sociograma.json', $data);
 
 <main>
     <h2>Gracias, <?= htmlspecialchars($input['nombre']) ?>. Tus datos se han guardado correctamente.</h2>
-    <a href="index.php">Volver al formulario</a>
+   
 </main>
 <?php
 include 'includes/footer.php';

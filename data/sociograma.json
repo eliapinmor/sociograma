@@ -1,0 +1,33 @@
+[
+    {
+        "nombre": "Eli",
+        "email": "eliapinmor@monlau.com",
+        "curso": "daw",
+        "preferido1": "elia",
+        "preferido2": "elia2",
+        "evitar1": "aaa",
+        "motivo_preferencia": "lroem",
+        "motivo_evitar": "upsum",
+        "rol_habitual": "lider",
+        "lenguaje_fuerte": [
+            "php",
+            "javascript"
+        ],
+        "experiencia": "1",
+        "comunicacion": "asincrona",
+        "herramientas": [
+            "Git",
+            "Docker"
+        ],
+        "disponibilidad_horas_inicio": "12:26",
+        "disponibilidad_horas_fin": "13:26",
+        "gestion_tiempo": "1",
+        "estres_proyecto": "1",
+        "preferencia_espacio": "silencio",
+        "sentimiento_grupo": "muy_comodo",
+        "dispositivo": "portatil",
+        "so_preferido": "mac",
+        "comentario": "",
+        "fecha": "2025-10-26 12:26:41"
+    }
+]

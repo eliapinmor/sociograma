@@ -15,28 +15,22 @@ $errors = isset($errors) ? $errors : [];
             <input id="email" name="email" type="email" required value="<?= old_field('email', $old_field) ?>">
             <?= field_error('email', $errors) ?>
 
-            <!-- <label for="curso">¿En qué curso estás?</label><br>
-                <input id="daw" name="curso" type="radio" value="daw" required <?= old_field('curso', $old_field)  === 'daw' ? 'checked' : '' ?>>
-                <label for="daw">DAW</label><br>
-                <input id="dam" name="curso" type="radio" value="dam" required <?= old_field('curso', $old_field)  === 'dam' ? 'checked' : '' ?>>
-                <label for="dam">DAM</label><br>
-                <input id="asix" name="curso" type="radio" value="asix" required <?= old_field('curso', $old_field)  === 'asix' ? 'checked' : '' ?>>
-                <label for="asix">ASIX</label><br>
-            </select>
-            <?= field_error('curso', $errors) ?> -->
+            <label for="edad">Edad</label>
+            <input id="edad" name="edad" type="number" min="15" max="100" required>
+
             <label for="curso">¿En qué curso estás?</label><br>
-<input id="daw" name="curso" type="radio" value="daw" 
-    <?= old_field('curso', $old_field) === 'daw' ? 'checked' : '' ?>>
-<label for="daw">DAW</label><br>
+            <input id="daw" name="curso" type="radio" value="daw" 
+                <?= old_field('curso', $old_field) === 'daw' ? 'checked' : '' ?>>
+            <label for="daw">DAW</label><br>
 
-<input id="dam" name="curso" type="radio" value="dam" 
-    <?= old_field('curso', $old_field) === 'dam' ? 'checked' : '' ?>>
-<label for="dam">DAM</label><br>
+            <input id="dam" name="curso" type="radio" value="dam" 
+                <?= old_field('curso', $old_field) === 'dam' ? 'checked' : '' ?>>
+            <label for="dam">DAM</label><br>
 
-<input id="asix" name="curso" type="radio" value="asix" 
-    <?= old_field('curso', $old_field) === 'asix' ? 'checked' : '' ?>>
-<label for="asix">ASIX</label><br>
-<?= field_error('curso', $errors) ?>
+            <input id="asix" name="curso" type="radio" value="asix" 
+                <?= old_field('curso', $old_field) === 'asix' ? 'checked' : '' ?>>
+            <label for="asix">ASIX</label><br>
+            <?= field_error('curso', $errors) ?>
 
         </section>
         <section>
@@ -66,11 +60,11 @@ $errors = isset($errors) ? $errors : [];
         <section>
             <h2>Rol y habilidades</h2>
             <label for="rol_habitual">¿En qué rol te sueles desenvolver habitualmente?</label><br>
-                <input id="lider" name="rol_habitual" type="radio" value="lider" required value="<?= old_field('rol_habitual', $old_field)  === 'lider' ? 'checked' : '' ?>">
+                <input id="lider" name="rol_habitual" type="radio" value="lider" required <?= old_field('rol_habitual', $old_field)  === 'lider' ? 'checked' : '' ?>">
                 <label for="lider">Líder</label>
-                <input id="seguidor" name="rol_habitual" type="radio" value="seguidor" required value="<?= old_field('rol_habitual', $old_field)  === 'seguidor' ? 'checked' : '' ?>">
+                <input id="seguidor" name="rol_habitual" type="radio" value="seguidor" required <?= old_field('rol_habitual', $old_field)  === 'seguidor' ? 'checked' : '' ?>">
                 <label for="seguidor">Seguidor</label><br>
-            </select>
+ 
             <?= field_error('rol_habitual', $errors) ?>
 
             <label for="lenguaje_fuerte[]">¿Cuáles son tus lenguajes de programación más fuertes?</label>
@@ -141,9 +135,9 @@ $errors = isset($errors) ? $errors : [];
 
 
             <label for="disponibilidad_horas">¿Qué disponibilidad de horas tienes?</label><div class="disponibilidad-container">
-            <input id="disponibilidad_horas_inicio" name="disponibilidad_horas_inicio" type="time" required>
+            <input id="disponibilidad_horas_inicio" name="disponibilidad_horas_inicio" type="time" required value="<?= old_field('disponibilidad_horas_inicio', $old_field) ?>">
             <p>-</p>
-            <input id="disponibilidad_horas_fin" name="disponibilidad_horas_fin" type="time" required></div>
+            <input id="disponibilidad_horas_fin" name="disponibilidad_horas_fin" type="time" required value="<?= old_field('disponibilidad_horas_fin', $old_field) ?>"></div>
             <?= field_error('disponibilidad_horas', $errors) ?>
         </section>
         <section>
