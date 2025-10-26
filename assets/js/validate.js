@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const horaFin = document.getElementById("disponibilidad_horas_fin");
 
     const disponibilidad_horas = [horaInicio, horaFin];
-name.addEventListener("input", function () {
+    name.addEventListener("input", function () {
         if (this.value.trim().length < 3) {
             console.log("escribe un nombre");
             name.style.border = "1px solid #f15454ff;"
@@ -20,15 +20,28 @@ name.addEventListener("input", function () {
 
 
 
-disponibilidad_horas.forEach(input => {
-    input.addEventListener("change", function () {
-        if (horaInicio.value && horaFin.value && horaInicio.value >= horaFin.value) {
-            horaInicio.style.border = horaFin.style.border = "1px solid #f15454";
-            console.log("La hora de inicio debe ser anterior a la hora de fin");
+    disponibilidad_horas.forEach(input => {
+        input.addEventListener("change", function () {
+            if (horaInicio.value && horaFin.value && horaInicio.value >= horaFin.value) {
+                horaInicio.style.border = horaFin.style.border = "1px solid #f15454";
+                console.log("La hora de inicio debe ser anterior a la hora de fin");
+            } else {
+                horaInicio.style.border = horaFin.style.border = "1px solid #6664ef";
+            }
+        });
+    });
+
+
+    edad.addEventListener("input", function () {
+        const valor = parseInt(this.value.trim());
+        if (isNaN(valor) || valor < 16 || valor > 100) {
+            console.log("Introduce una edad válida entre 16 y 100 años");
+            this.style.border = "1px solid #f15454";
+            submit_enviar.disabled = true;
         } else {
-            horaInicio.style.border = horaFin.style.border = "1px solid #6664ef";
+            this.style.border = "1px solid #6664ef";
+            submit_enviar.disabled = false;
         }
     });
-});
 
 });
