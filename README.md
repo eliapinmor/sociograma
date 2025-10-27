@@ -24,7 +24,8 @@ Cuando el usuario se introduce un dato inválido en una respuesta, se marca con 
 
 ### Estructura
 La estrcutura de archivos del proyecto es:
-sociograma
+
+/sociograma
   - assets
     - css
       - styles.css
