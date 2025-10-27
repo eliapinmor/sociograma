@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const horaFin = document.getElementById("disponibilidad_horas_fin");
 
     const disponibilidad_horas = [horaInicio, horaFin];
+
     name.addEventListener("input", function () {
         if (this.value.trim().length < 3) {
             console.log("escribe un nombre");
@@ -34,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     edad.addEventListener("input", function () {
         const valor = parseInt(this.value.trim());
-        if (isNaN(valor) || valor < 16 || valor > 100) {
-            console.log("Introduce una edad válida entre 16 y 100 años");
+        if (isNaN(valor) || valor < 15 || valor > 100) {
+            console.log("Introduce una edad válida entre 15 y 100 años");
             this.style.border = "1px solid #f15454";
             submit_enviar.disabled = true;
         } else {
