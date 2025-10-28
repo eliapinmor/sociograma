@@ -189,14 +189,19 @@ $errors = isset($errors) ? $errors : [];
             </select>
             <?= field_error('dispositivo', $errors) ?>
 
-                <label for="so_preferido">¿Con que sistema operativo sueles trabajar?</label><br>
-                    <input id="windows" name="so_preferido" type="radio" value="windows" <?= old_field('so_preferido', $old_field)  === 'windows' ? 'checked' : '' ?>>
-                    <label for="windows">Windows</label><br>
-                    <input id="linux" name="so_preferido" type="radio" value="linux" <?= old_field('so_preferido', $old_field)  === 'linux' ? 'checked' : '' ?>>
-                    <label for="linux">Linux</label><br>
-                    <input id="mac" name="so_preferido" type="radio" value="mac" <?= old_field('so_preferido', $old_field)  === 'mac' ? 'checked' : '' ?>>
-                    <label for="mac">Mac</label><br>
-                </select>
+            <label for="dispositivo_color">¿De qué color es tu dispositivo?</label>
+            <input type="color" id="dispositivo_color" name="dispositivo_color" value="<?= old_field('dispositivo_color', $old_field) ? old_field('dispositivo_color', $old_field) : '#000000' ?>">
+
+            <label for="so_preferido">¿Con que sistema operativo sueles trabajar?</label><br>
+                <input id="windows" name="so_preferido" type="radio" value="windows" <?= old_field('so_preferido', $old_field)  === 'windows' ? 'checked' : '' ?>>
+                <label for="windows">Windows</label><br>
+                <input id="linux" name="so_preferido" type="radio" value="linux" <?= old_field('so_preferido', $old_field)  === 'linux' ? 'checked' : '' ?>>
+                <label for="linux">Linux</label><br>
+                <input id="mac" name="so_preferido" type="radio" value="mac" <?= old_field('so_preferido', $old_field)  === 'mac' ? 'checked' : '' ?>>
+                <label for="mac">Mac</label><br>
+            </select>
+            <?= field_error('so_preferido', $errors) ?>
+
         </section>
         <section>
             <h2>Observaciones</h2>

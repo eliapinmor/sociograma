@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/validate.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="assets/img/icon.png">
 </head>
 <body>
     <header>

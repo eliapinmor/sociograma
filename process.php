@@ -25,6 +25,7 @@ $input = [
     'preferencia_espacio' => trim($_POST['preferencia_espacio'] ?? ''),
     'sentimiento_grupo' => trim($_POST['sentimiento_grupo'] ?? ''),
     'dispositivo' => trim($_POST['dispositivo'] ?? ''),
+    'dispositivo_color' => trim($_POST['dispositivo_color'] ?? ''),
     'so_preferido' => trim($_POST['so_preferido'] ?? ''),
     'comentario' => trim($_POST['comentario'] ?? '')
 ];
@@ -133,6 +134,10 @@ if (!in_array($input['sentimiento_grupo'], ['muy_comodo','comodo','neutral','inc
 
 if (!in_array($input['dispositivo'], ['portatil', 'sobremesa'])) {
     $errors['dispositivo'] = 'Selecciona con que dispositivo sueles trabajar';
+}
+
+if (!preg_match('/^#[0-9A-Fa-f]{6}$/', $input['dispositivo_color'])) {
+    $errors['dispositivo_color'] = 'Selecciona un color válido';
 }
 
 if (!in_array($input['so_preferido'], ['windows', 'linux', 'mac'])) {
